@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Allenatore gratuito per le posizioni tipiche della King's Indian Defence.">
+  <title>KID — King's Indian Defence Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="KID home"><span class="brand-mark">K</span><span>KID</span></a>
+    <div class="tag">KING’S INDIAN DEFENCE · TRAINER</div>
+    <button id="newTop" class="new-button" type="button"><span>↻</span> Nuova posizione</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow"><span id="exerciseNumber">ESERCIZIO 01</span><i></i><b id="moveNumber">Mossa 10 del Bianco</b></div>
+      <h1>Trova il piano<br><em>del Nero.</em></h1>
+      <p>Leggi la posizione, riconosci il tema strategico e inserisci la migliore continuazione in notazione algebrica.</p>
+    </section>
+
+    <section class="trainer">
+      <div class="board-wrap">
+        <div id="board" class="board" role="img" aria-label="Scacchiera vista dal lato del Nero"></div>
+        <div class="orientation">● NERO IN BASSO</div>
+      </div>
+
+      <div class="panel">
+        <div class="variation"><span id="opening"></span><b id="lastMove"></b></div>
+        <h2>Il Nero muove.</h2>
+        <p id="question" class="question"></p>
+
+        <form id="answerForm">
+          <label for="moveInput">La tua risposta</label>
+          <div class="answer-row">
+            <input id="moveInput" placeholder="es. ...f5" autocomplete="off" spellcheck="false">
+            <button type="submit">Valuta mossa</button>
+          </div>
+          <small>Puoi scrivere “f5”, “...f5” oppure la notazione completa.</small>
+        </form>
+
+        <div id="feedback" class="feedback hidden" aria-live="polite">
+          <div class="score"><strong id="scoreValue"></strong><span>/10</span></div>
+          <div><h3 id="scoreTitle"></h3><p id="scoreText"></p></div>
+        </div>
+        <div id="solution" class="solution hidden">
+          <span>MIGLIORE CONTINUAZIONE</span>
+          <strong id="bestMove"></strong>
+          <p id="idea"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>KID TRAINER</span>
+    <p>Allenamento strategico · Nessun account · Gratuito</p>
+    <button id="newBottom" type="button">Prossimo esercizio <b>→</b></button>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
